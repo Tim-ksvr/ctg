@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ENV METHOD=aes-128-gcm PASSWORD=ss123456 USER=user
-ENV PORT=80 PATH=/u123456ws
+ENV PORT=80 WSPATH=/u123456ws
 
 ADD * /app/
 RUN apk add --update --no-cache curl nginx bash sudo openssh \
