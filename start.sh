@@ -4,5 +4,4 @@
 ssh-keygen -A
 /usr/sbin/sshd -D -e "$@" &
 crond
-sed -i "s/##path##/$WSPATH/g" /etc/nginx/http.d/default.conf
 nginx -g 'daemon off;'
