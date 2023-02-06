@@ -4,5 +4,6 @@
 ssh-keygen -A
 sed -i "s/wspath/$WSPATH/" /etc/nginx/http.d/default.conf
 /usr/sbin/sshd -D -e "$@" &
+[ -f "/mnt/vol/cron" ] && cat /mnt/vol/cron >>/var/spool/cron/crontabs/root
 crond
 nginx -g 'daemon off;'
