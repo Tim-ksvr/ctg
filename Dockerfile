@@ -11,6 +11,7 @@ RUN apk add --update --no-cache curl nginx bash sudo openssh \
   && echo "user ALL=NOPASSWD: ALL" >> /etc/sudoers \
   && mv /app/default.conf /etc/nginx/http.d \
   && chmod a+x app/ctg /app/start.sh \
+  && mkdir -p /mnt/vol \
   && rm /app/Dockerfile
 
 WORKDIR /app
